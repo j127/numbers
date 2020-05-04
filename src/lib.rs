@@ -10,13 +10,8 @@ fn output_sequence(numbers: &[u8]) {
 }
 
 fn generate_sequence(limit: u8) -> Vec<u8> {
-    // Creating an empty vector doesn't allocate until you put something
-    // in it.
-    let mut numbers = Vec::new();
-    for n in 1..=limit {
-        numbers.push(n)
-    }
-    numbers
+    // type inferred from return value of function (Vec<u8>)
+    (1..=limit).collect()
 }
 
 pub fn print(limit: u8) {
