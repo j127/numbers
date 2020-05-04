@@ -26,3 +26,9 @@ pub fn print(limit: u8) {
     output_sequence(&array_numbers);
     output_sequence(&array_numbers);
 }
+
+#[test]
+fn generate_sequence_should_work() {
+    let result = generate_sequence(3);
+    assert_eq!(result, &[1, 2, 3]);
+}
